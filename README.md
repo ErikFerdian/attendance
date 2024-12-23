@@ -1,64 +1,21 @@
-plugins {
-id 'com.android.application'
-id 'org.jetbrains.kotlin.android'
-id 'kotlin-android-extensions'
-id 'kotlin-kapt'
-}
+# Absensi
+# Poster
+![WhatsApp Image 2024-12-23 at 14 53 57_20a16ae4](https://github.com/user-attachments/assets/dbb20c79-dc3e-4741-b6b4-ccb83d74f565)
+# Deskripsi Aplikasi
+Absensi merupakan salah satu elemen penting dalam manajemen sumber daya manusia (SDM) di Perusahaan, institusi Pendidikan, maupun organisasi lainnya. Dalam era digital saat ini, proses absensi manual yang dilakukan dengan tanda tangan di lembar presensi atau input data ke sistem desktop dianggap tidak efisien. Metode ini tidak hanya memakan waktu, tetapi juga rentan terhadap manipulasi data dan kesalahan input. Penggunaan perangkat mobile yang semakin meningkat memberikan peluang untuk mengembangkan Solusi absensi yang lebih modern, efisien, dan dapat diakses di mana saja. Oleh karena itu, aplikasi absensi berbasis mobile diharapkan mampu menjadi Solusi yang lebih praktis dan efisien untuk meningkatkan keakuratan serta kecepatan proses absensi.
 
-android {
-compileSdk 32
+# Tujuan Aplikasi
+Pengembangan aplikasi absensi berbasis mobile ini bertujuan untuk: 
+1. Mempermudah proses pencatatan absensi baik pegawai, mahasiswa, maupun anggota organisasi. 
+2. Mengurangi kesalahan dalam pencatatan manual dan menghindari manipulasi data. 
+3. Mempermudah monitoring kehadiran oleh manajemen atau administrator secara real-time.
 
-    defaultConfig {
-        applicationId "com.azhar.absensi"
-        minSdk 21
-        targetSdk 32
-        versionCode 1
-        versionName "1.0"
+# Profile Developer
+1. Syafirah Amirah Hermanto (23050974006)
+2. Erik Ferdiansyah (23050974015)
+3. Shabrina Naila Augusti (23050974037)
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
+Project aplikasi Attendance ini kami buat untuk memenuhi tugas dari mata kuliah Pemrograman Mobile pada Prodi S1 [Pendidikan Teknologi Informasi](https://pendidikan-ti.ft.unesa.ac.id/) dari [Fakultas Teknik](https://ft.unesa.ac.id/) di [Universitas Negeri Surabaya](https://unesa.ac.id/)
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-}
-
-dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.6.0'
-    implementation 'com.google.android.gms:play-services-location:19.0.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
-    // Lifecycle Components
-    implementation 'androidx.lifecycle:lifecycle-livedata:2.4.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.4.1'
-    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
-
-    // Room Database
-    implementation "androidx.room:room-rxjava3:2.4.2"
-    implementation "androidx.room:room-runtime:2.4.2"
-    kapt "androidx.room:room-compiler:2.4.2"
-
-    // Glide
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
-
-    // Rx Java
-    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
-    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
-
-    // Custom Permission
-    implementation 'com.karumi:dexter:6.2.2'
-}
+# View Aplikasi
+![WhatsApp Image 2024-12-23 at 15 12 41_25b6bf2a](https://github.com/user-attachments/assets/aee7d40e-a613-47f6-96d5-cca817647e07)
