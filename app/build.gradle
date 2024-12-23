@@ -1,0 +1,112 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-kapt'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services' // Plugin Google Services
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    namespace = "com.azhar.absensi"
+    compileSdk = 34 // API 34
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17 // Java 17
+        targetCompatibility = JavaVersion.VERSION_17 // Java 17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17' // Targeting Java 17
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    android {
+        defaultConfig {
+            applicationId "com.azhar.absensi"  // Pastikan ini ada dan sesuai dengan package name aplikasi Anda
+            minSdkVersion 23
+            targetSdkVersion 34
+            versionCode 1
+            versionName "1.0"
+            // Pastikan Anda memiliki konfigurasi ini
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        }
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled true // Enable code shrinking for release builds
+            shrinkResources true // Remove unused resources
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+android {
+    viewBinding {
+        enabled = true
+    }
+}
+
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:32.1.0') // Gunakan versi konsisten dari BoM
+
+    // Firebase libraries
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-analytics'
+    // Testing dependencies
+    testImplementation 'junit:junit:4.13.2' // Versi terbaru JUnit 4
+    // AndroidX Test core library
+    androidTestImplementation 'androidx.test:core:1.5.0'
+
+    // JUnit Extension untuk Android
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+
+    // Instrumentation runner untuk pengujian
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+
+    // Assert library untuk pengujian
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Lokasi
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
+
+    // Dexter
+    implementation 'com.karumi:dexter:6.2.3'
+
+    // ExifInterface
+    implementation 'androidx.exifinterface:exifinterface:1.3.7'
+
+    // Room
+    implementation "androidx.room:room-runtime:2.5.1"
+    kapt "androidx.room:room-compiler:2.5.1"
+    implementation "androidx.room:room-ktx:2.5.1"
+
+    // ViewModel dan Lifecycle
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
+    implementation("androidx.activity:activity-ktx:1.7.2")
+
+    // RxJava
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    // Material Design
+    implementation("com.google.android.material:material:1.9.0")
+}
+

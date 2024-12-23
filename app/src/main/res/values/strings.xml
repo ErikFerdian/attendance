@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Aplikasi Absensi</string>
+    <string name="logout">Logout</string>
+</resources>

@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        // Tambahkan jcenter() jika masih diperlukan
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        // Tambahkan jcenter() jika masih diperlukan
+    }
+}
+
+rootProject.name = "Aplikasi Absensi"
+include(":app")
